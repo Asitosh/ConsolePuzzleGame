@@ -32,12 +32,18 @@ public class Sherlock implements Game{
 	@Override
 	public void play(int level, int life, User user) {
 		Scanner in = new Scanner(System.in);
+		System.out.println("Lets Start the game");
+		System.out.println("You will be given some situations and you will have to find the culprit");
+		System.out.println("NOTE: you have to type the first name of the culprit in any small or upper case to get the answer to be correct ");
 		try {
 			for (int i = level; i <= maxLevel; i++) {
-				
+				System.out.println("@@@@@\t LEVEL "+i +"\t@@@@@@@@");
 				Puzzle ques = puzzleDao.getPuzzle(Integer.toString(i));
 				System.out.println("Level "+i+": Question");
-				System.out.println(ques.getQuestion());				
+				String question = ques.getQuestion();
+				for (String s: question.split("::::")) {
+					System.out.println(s);
+				}			
 				String userAnswer = "";
 				boolean levelNotPassed = true;
 				boolean pauseAndExit = false;
@@ -69,13 +75,16 @@ public class Sherlock implements Game{
 					break;
 				}
 				if (life < 1) {
-					System.out.println("Sorry you have no more life left to play the game");
+					System.out.println(",,,,Sorry you have no more life left to play the game,,,,,");
 					break;
 				}
-				System.out.println("Correct answer now we move to next level");
+				System.out.println("****\t Hurray Correct answer now we move to next level \t****");
+				increaseUserExperience(user, level);
+				System.out.println("######\t Your experience level is now increased \t######");
 				level++;
-				increaseUserExperience(user, level);				
+								
 			}
+			System.out.println("You have completed all the levels");
 		} catch (KeyNotFoundExcetion e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
