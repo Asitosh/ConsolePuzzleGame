@@ -1,3 +1,3 @@
-SHERLOCK3;You have just interrogated 4 suspects who killed John. :::: Below are there statements. :::: you know for sure only one is telling truth rest are lying :::: Jack : “Britney did it” :::: Britney : “Jack did it” :::: Selena : “Britney’s telling the truth” :::: Martha : “Selena’s not lying” :::: Who killed John?;britney
-SHERLOCK2;You are working on the Markus murder case and have narrowed down 3 suspects. :::: Jason :::: Martha :::: Leonid :::: And you have also found a note '7-8-9-10-11' on calendar kept on table where Markus was killed which is the clue. :::: Who killed Markus;Jason
-SHERLOCK1;Suddenly someone throws a big stone and shatters your window :::: You see out and see 3 Crimson brothers passing. :::: Mark :::: Philipp :::: Steffen :::: You know someone from the brothers did it :::: When you go out you find some note '? crimson did it' :::: Who has broken your window ::::;Mark
+"1";"abckjbvbdjbvjbalfdv";"abcd"
+"2";"akhjdgfadgflauhaefa";"kkkk"
+"3";"hvkchvasdkhvaldsjbv";"aaaa"

@@ -14,14 +14,12 @@ public class PuzzleDaoImpl implements PuzzleDao {
 	private static final String fileName = "Sherlock.csv";
 
 	private static final String seperator = ";";
-	
-	private static final String prefix = "SHERLOCK";
 
 	@Override
 	public Puzzle getPuzzle(String key) throws KeyNotFoundExcetion {
 		Puzzle puzzle = new Puzzle();
 		try (Stream<String> stream = Files.lines(Paths.get(fileName), Charset.defaultCharset());) {
-			String line = stream.filter(s -> s.startsWith(prefix+key))
+			String line = stream.filter(s -> s.contains(key))
 					            .findFirst()
 					            .orElse(null);
 			if (null != line) {

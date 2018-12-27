@@ -8,16 +8,11 @@ public class GameFactory {
 	
 	public static void startGame(User user) {
 		System.out.println("So which Char would you like to play today pick your options from below");
-		System.out.println("Type 1 for Sherlock Holmes");
-		System.out.println("Type 2 for SSpiderMan");
 		int selectedGame = InputValidator.validateInputIntOption(3);
 		Game game = null;
 		switch(selectedGame) {
 		case 1:
 			game = new Sherlock();
-			break;
-		case 2:
-			System.out.println("Sorry the Game you are searching is still in progress try another");
 			break;
 		default:
 			System.out.println("Incorrect input try again");
@@ -36,7 +31,7 @@ public class GameFactory {
 			game = new Sherlock();
 			break;
 		default:
-			System.out.println("Sorry the game was not found start new game");
+			System.out.println("Incorrect input try again");
 			startGame(user);
 		}
 		if (null != game) {
