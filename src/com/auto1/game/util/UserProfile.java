@@ -33,6 +33,8 @@ public class UserProfile {
 		User user =  userDao.findUser(userId);
 		if (null != user) {
 			System.out.println("Found the user");
+			System.out.println("Welcome Back "+ user.getUserId());
+			System.out.println("Your experience level is "+user.getExperience());
 			return user;
 		} else {
 			System.out.println("User not found please try again");
@@ -41,6 +43,9 @@ public class UserProfile {
 		
 	}
 
+	/*
+	 * this
+	 */
 	private User createNewUser() {
 		System.out.println("Please enter a username of length 4 you would like to have");
 		Scanner in = new Scanner(System.in);
@@ -57,6 +62,8 @@ public class UserProfile {
 			System.out.println("Creating new user");
 			User newUser = new User(userId,0);
 			userDao.insertUser(newUser);
+			System.out.println("Welcome "+ newUser.getUserId());
+			System.out.println("Your experience level is "+newUser.getExperience());
 			return newUser;
 		}
 		return null;
