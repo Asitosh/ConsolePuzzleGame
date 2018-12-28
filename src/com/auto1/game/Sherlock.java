@@ -37,6 +37,7 @@ public class Sherlock implements Game{
 		System.out.println("NOTE: you have to type the first name of the culprit in any small or upper case to get the answer to be correct ");
 		try {
 			for (int i = level; i <= maxLevel; i++) {
+				System.out.println("You can pause the game at current level and quit by simply typing 'quit'");
 				System.out.println("@@@@@\t LEVEL "+i +"\t@@@@@@@@");
 				Puzzle ques = puzzleDao.getPuzzle(Integer.toString(i));
 				System.out.println("Level "+i+": Question");
