@@ -1,5 +1,7 @@
 package com.auto1.game;
 
+import java.util.Scanner;
+
 import com.auto1.game.entity.SavedGame;
 import com.auto1.game.entity.User;
 import com.auto1.game.util.InputValidator;
@@ -10,7 +12,8 @@ public class GameFactory {
 		System.out.println("So which Char would you like to play today pick your options from below");
 		System.out.println("Type 1 for Sherlock Holmes");
 		System.out.println("Type 2 for SSpiderMan");
-		int selectedGame = InputValidator.validateInputIntOption(3);
+		Scanner in = new Scanner(System.in);
+		int selectedGame = InputValidator.validateInputIntOption(in,3);
 		Game game = null;
 		switch(selectedGame) {
 		case 1:

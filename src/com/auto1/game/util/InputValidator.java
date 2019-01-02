@@ -6,8 +6,7 @@ public class InputValidator {
 
 	
 
-	public static int validateInputIntOption(int numberOfOptions) {
-		Scanner in = new Scanner(System.in);
+	public static int validateInputIntOption(Scanner in, int numberOfOptions) {
 		int userInput = in.nextInt();
 		while(!(userInput >= 1 && userInput <= numberOfOptions)) {		
 			
